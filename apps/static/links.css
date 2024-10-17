@@ -1,0 +1,47 @@
+
+div {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Style for the first link (green background) */
+.new_tab {
+    background-color: #ccffcc;
+}
+
+.new_tab a {
+    color: red;
+}
+
+.new_tab a:hover {
+    background-color: #b3ffb3;
+}
+
+/* Style for the second link (dark gray background) */
+.same_tab {
+    background-color: #4d4d4d;
+}
+
+.same_tab a {
+    color: #d9a53b;
+}
+
+.same_tab a:hover {
+    background-color: #666666;
+}
+
+/* Style for the third link (black background) */
+.new_tab1 {
+    background-color: #000000;
+}
+
+.new_tab1 a {
+    color: #fefefe;
+    /*text-decoration: none;  If you whant to remove the line under the text*/ 
+}
+
+.new_tab1 a:hover {
+    background-color: #333333;
+}

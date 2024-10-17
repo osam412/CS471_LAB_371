@@ -1,0 +1,25 @@
+{% load static %}
+{% block title %}  {% endblock title %}
+{% block content %}
+{% block stylesheets %} 
+<link rel="stylesheet" href="{% static 'format.css' %}"> 
+{% endblock stylesheets %}
+
+<div class="ex">
+    <h1>Example of formating tags</h1> 
+</div>
+
+<div class="f">
+<a >This text has <b>subtext</b> using b tag</a> <br>
+<a >This text has <strong>subtext</strong> using strong tag</a> <br>
+<a >This text has <i>subtext</i> using i tag</a> <br>
+<a >This text has <em>subtext</em> using emphasiz tag</a> <br>
+<a >This text has <small>subtext</small> using small tag</a> <br>
+<a >This text has <mark>subtext</mark> using mark tag</a> <br>
+<a >This text has <ins>subtext</ins> using ins tag</a> <br>
+<a >This text has X<sub>subtext</sub> using sub tag</a> <br>
+<a >This text has X<sup>subtext</sup> using sup tag</a> <br>
+
+</div>
+
+{% endblock content %}

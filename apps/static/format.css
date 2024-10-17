@@ -1,0 +1,13 @@
+.ex{
+    color: rgb(72, 151, 56);
+    background-color: beige;
+    padding: 0.5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.f{
+    line-height: 2;
+   margin-block: 10px;
+   font-size: 20px;
+}
