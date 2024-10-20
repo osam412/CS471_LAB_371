@@ -13,6 +13,8 @@ path('html5/text/formatting', views.formatters, name="books.formatters"),
 path('html5/listing', views.listing, name="books.listing"),
 path('html5/tables', views.table, name="books.tables"),
 
+path('search', views.Searching, name="books.search"),
+
 
 
 ]
