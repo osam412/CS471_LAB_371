@@ -3,7 +3,11 @@
 
 
 {% block content %}
-
-
-{{books}}
+<h1>Books List</h1>
+ 
+    {% for obj in books %}
+         ID: {{obj.id}}, Title: {{obj.title}}
+           <hr>
+        {% endfor %}
+   
 {% endblock content %}
