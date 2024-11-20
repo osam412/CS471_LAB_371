@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+{% block title %} Delete Book {% endblock %}
+{% block content %}
+<h3>Delete Book</h3>
+<p>Are you sure you want to delete "{{ obj.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}  
+    <button type="submit">Delete Book</button>
+    <a href="{% url 'listBooks_part2' %}">Cancel</a>
+</form>
+{% endblock content %}
