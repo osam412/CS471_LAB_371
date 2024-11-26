@@ -13,8 +13,8 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
+
+ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
@@ -22,4 +22,20 @@ urlpatterns = [
  path('books/', include("apps.bookmodule.urls")), 
  path('users/', include("apps.usermodule.urls")) ,
 ]
+"""
+from django.contrib import admin # type: ignore
+from django.urls import include, path # type: ignore
+from django.conf import settings # type: ignore
+from django.conf.urls.static import static # type: ignore
+from django.urls import include, path # type: ignore
+
+
+urlpatterns = [
+ path('admin/', admin.site.urls),
+ path('books/', include("apps.bookmodule.urls")), 
+ path('users/', include("apps.usermodule.urls")) ,
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

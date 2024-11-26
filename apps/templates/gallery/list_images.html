@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h3>Gallery</h3>
+<ul>
+    {% for item in images %}
+        <div style="margin: 20px;">
+            <img src="{{ item.image.url }}" alt="Gallery Image" style="width: 300px; height: 250px;  border: 2px solid #333; border-radius: 5px;">
+            <p>{{ item.description }}</p>
+            <a href="{% url 'update_image' item.id %}">Edit</a> | 
+            <a href="{% url 'delete_image' item.id %}">Delete</a>
+        </div>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_image' %}">Add New Item</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h3>Delete Student (Many-to-Many)</h3>
+<p>Are you sure you want to delete "{{ student.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+<a href="{% url 'list_students2' %}">Cancel</a>
+{% endblock %}

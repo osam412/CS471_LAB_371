@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h3>Add Student</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ student_form.as_p }} 
+    {{ address_form.as_p }}  
+    <button type="submit">Add Student</button>
+</form>
+{% endblock %}

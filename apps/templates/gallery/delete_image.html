@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h3>Delete Image</h3>
+<p>Are you sure you want to delete "{{ gallery_item.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a href="{% url 'list_images' %}">Cancel</a>
+</form>
+{% endblock %}

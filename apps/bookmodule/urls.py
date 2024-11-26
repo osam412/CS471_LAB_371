@@ -33,9 +33,27 @@ path('lab9_part1/deletebook/<int:id>/', views.delete_book_part1, name='delete_bo
 path('lab9_part2/addbook', views.addBook_part2, name='addBook_part2'),
 path('lab9_part2/editbook/<int:id>/', views.updateBook_part2, name='updateBook_part2'),
 path('lab9_part2/deletebook/<int:id>/', views.delete_book_part2, name='delete_book_part2'),
-path('lab9_part2/listbooks/', views.listBooks_part2, name='listBooks_part2')
+path('lab9_part2/listbooks/', views.listBooks_part2, name='listBooks_part2'),
 #lab9
 
+#lab10
+path('students/', views.list_students, name='list_students'),
+path('students/add/', views.add_student, name='add_student'),
+path('students/update/<int:id>/', views.update_student, name='update_student'),
+path('students/delete/<int:id>/', views.delete_student, name='delete_student'),
+
+path('students2/', views.list_students2, name='list_students2'),
+path('students2/add/', views.add_student2, name='add_student2'),
+path('students2/update/<int:id>/', views.update_student2, name='update_student2'),
+path('students2/delete/<int:id>/', views.delete_student2, name='delete_student2'),
+
+#books/students2/delete/1/
+# Gallery CRUD URL patterns
+    path('gallery/', views.list_images, name='list_images'),
+    path('gallery/add/', views.add_image, name='add_image'),
+    path('gallery/update/<int:id>/', views.update_image, name='update_image'),
+    path('gallery/delete/<int:id>/', views.delete_image, name='delete_image'),
+#lab10
 
 
 
