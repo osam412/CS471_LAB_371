@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<h1>Task 5: Create Table</h1>
+<button onclick="createTable()">Create Table</button>
+<div id="tableContainer"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function createTable() {
+        const container = document.getElementById("tableContainer");
+
+        
+        const table = document.createElement("table");
+        table.style.border = "1px solid black";
+        table.style.borderCollapse = "collapse";
+
+        
+        const header = table.insertRow();
+        const headers = ["Column 1", "Column 2", "Column 3"];
+        headers.forEach(text => {
+            const cell = header.insertCell();
+            cell.textContent = text;
+            cell.style.border = "1px solid black";
+            cell.style.padding = "5px";
+        });
+
+        
+        for (let i = 0; i < 3; i++) {
+            const row = table.insertRow();
+            for (let j = 0; j < 3; j++) {
+                const cell = row.insertCell();
+                cell.textContent = `Row ${i + 1} Col ${j + 1}`;
+                cell.style.border = "1px solid black";
+                cell.style.padding = "5px";
+            }
+        }
+
+        
+        container.appendChild(table);
+    }
+</script>
+{% endblock %}

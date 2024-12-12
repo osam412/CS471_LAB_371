@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import get_object_or_404, render, redirect # type: ignore
 from .models import Book, Gallery, Student, Student2
 from django.db.models import Q
 from django.db.models import Count, Sum, Avg, Max, Min
@@ -8,6 +8,28 @@ from .forms import AddressForm, BookForm, DeleteBookForm, GalleryForm, Student2F
 
 
 
+
+#lab12
+# Task 1
+def task1(request):
+    return render(request, 'bookmodule_2/lab12_task1.html')
+
+# Task 2
+def task2(request):
+    return render(request, 'bookmodule_2/lab12_task2.html')
+
+# Task 3
+def task3(request):
+    return render(request, 'bookmodule_2/lab12_task3.html')
+
+# Task 4
+def task4(request):
+    return render(request, 'bookmodule_2/lab12_task4.html')
+
+# Task 5
+def task5(request):
+    return render(request, 'bookmodule_2/lab12_task5.html')
+#lab12
 
 #lab7
 def simple_query(request):

@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<h1>Task 4: Change Style on Hover</h1>
+<div id="hoverDiv" 
+     style="width: 200px; height: 100px; border: 1px solid black;"
+     onmouseover="changeStyle()" onmouseout="resetStyle()">Hover Over Me</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function changeStyle() {
+        const div = document.getElementById("hoverDiv");
+        div.style.backgroundColor = "yellow";
+        div.style.fontSize = "20px";
+    }
+
+    function resetStyle() {
+        const div = document.getElementById("hoverDiv");
+        div.style.backgroundColor = "";
+        div.style.fontSize = "";
+    }
+</script>
+{% endblock %}

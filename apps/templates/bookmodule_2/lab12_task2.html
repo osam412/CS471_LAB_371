@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<h1>Task 2: Add an Item to the List</h1>
+<ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+<button onclick="addItem()">Add Item</button>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function addItem() {
+        const list = document.getElementById("myList");
+        const itemCount = list.children.length + 1; 
+        
+        const newItem = document.createElement("li");
+        newItem.textContent = `Item ${itemCount}`;
+        
+        
+        list.appendChild(newItem);
+    }
+</script>
+{% endblock %}
